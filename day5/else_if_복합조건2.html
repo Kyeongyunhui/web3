@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>else_if_복합조건2</title>
+</head>
+<body>
+    <script>
+
+        // 조건
+        /*
+        1. 사용자의 나이를 입력받아, 신분증 유무를 확인하기
+        2. 사용자의 나이가 20살이 넘고, 신분증이 있다면 입장 가능
+        3. 사용자의 나이가 18살이 넘고 20세 미만인 사람이, 신분증이 있다면 입장이 가능하지만 12시에 퇴장해야함!
+        18세가 넘어도 신분증이 없으면 입장 불가능
+        4. 18세 미만, 신분증 없는 고객은 입장이 불가능하다고 알리기
+        이외의 값을 입력하면 관리자에게 문의하세요. 출력 
+
+        ===========================================================
+        
+        confirm을 사용해서 신분증의 유무를 확인 받을 것.
+        &&연산자와 ||연산자를 활용할 것.
+        */
+
+        /*
+        let user_age = prompt("나이를 입력해주세요.");
+        let user_card = confirm("신분증을 보여주세요.");
+
+        if (user_age >= 20) {
+            if (user_card) {
+                document.write("입장해주세요!");
+            } else {
+                document.write("신분증이 없으면 입장이 불가능합니다.");
+            }
+        } else if (user_age >= 18 && user_age < 20) {
+            if (user_card) {
+                document.write("입장해주세요. 12시에는 퇴장해야합니다.");
+            } else {
+                document.write("신분증이 없으면 입장이 불가능합니다.");
+            }
+        } else if (user_age < 18){
+            document.write("입장이 불가능합니다.");
+        } else {
+            document.write("관리자에게 문의하세요.");
+        }
+
+        */
+
+        let user_age = prompt("나이를 입력해주세요.");
+        let user_card = confirm("신분증을 보여주세요.");
+        
+        if (user_age >= 20) {
+            if (user_card) {
+                document.write("입장해주세요!");
+            } else {
+                document.write("신분증이 없으면 입장이 불가능합니다.");
+            }
+        } else if (user_age >= 18 && user_age < 20 && user_card) {
+            document.write("입장해주세요. 12시에는 퇴장해야합니다.");
+        } else if (user_age < 18 || !user_card){
+            document.write("입장이 불가능합니다.");
+        } else {
+            document.write("관리자에게 문의하세요.");
+        }
+
+    </script>
+</body>
+</html>
