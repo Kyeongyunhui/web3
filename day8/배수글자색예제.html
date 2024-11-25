@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배수글자색예제</title>
+    <style>
+        .red {
+            color: red;
+        }
+        
+        .green {
+            color: green;
+        }
+
+        .aqua {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+
+        let i = 1;
+        for (i; i <= 100; i++){
+            if(i%5==0 && i%7!==0){
+                document.write("<p class='red'>" + i + "</p>");
+            } else if (i%5!==0 && i%7==0) {
+                document.write("<p class='green'>" + i + "</p>");
+            } else if (i%5==0 && i%7==0) {
+                document.write("<p class='aqua'>" + i + "</p>");
+            } else {
+
+            }
+        }
+
+    </script>
+</body>
+</html>
