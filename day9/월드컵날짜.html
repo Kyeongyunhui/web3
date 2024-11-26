@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월드컵 날짜</title>
+</head>
+<body>
+    <script>
+        let day = new Date("2002-05-31");
+
+        let theYear = day.getFullYear()
+            theMonth = day.getMonth() + 1;
+            theDate = day.getDate(),
+            theDay = day.getDay();
+
+            document.write("<h2>월드컵 날짜 정보</h2>");
+            document.write(`월드컵 연도 : ${theYear}<br>`);
+            document.write(`월드컵 월 : ${theMonth}<br>`);
+            document.write(`월드컵 일 : ${theDate}<br>`);
+            document.write(`월드컵 요일 : ${theDay}<br>`);
+    </script>
+</body>
+</html>
