@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보</title>
+</head>
+<body>
+    <script>
+        let user = prompt("가위, 바위, 보 중 택1");
+        let computerNum = Math.ceil(Math.random()*3);
+        let ex;
+
+        if(computerNum === 1){
+            ex = "가위";
+        } else if(computerNum === 2){
+            ex = "바위";
+        } else{
+            ex = "보";
+        };
+
+        if (user === ex){
+            document.write("비겼습니다! 컴퓨터도 " +ex+ "를 냈습니다.");
+        } else if (
+            (user === "가위" && ex === "바위") || 
+            (user === "바위" && ex === "보") || 
+            (user === "보" && ex === "가위")) {
+            document.write("아쉽습니다! 컴퓨터가 이겼습니다. (컴퓨터: " +ex+ ")");
+        } else {
+            document.write("축하합니다! 사용자가 이겼습니다. (컴퓨터: " +ex+ ")");
+        };
+
+    </script>
+</body>
+</html>

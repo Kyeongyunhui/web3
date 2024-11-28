@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤색상맞추기</title>
+</head>
+<body>
+    <script>
+
+        document.write("<h1>컴퓨터가 생각하고 있는 색상 맞추기</h1>");
+
+        let userColor = prompt("색깔을 맞춰주세요.","빨강,주황,노랑,초록,파랑 중 (택1)");
+
+        let randomcolorNum = Math.ceil(Math.random()*5);
+
+        let randomColor;
+
+        if(randomcolorNum === 1){
+            randomColor = "빨강";
+        } else if(randomcolorNum === 2){
+            randomColor = "주황";
+        } else if(randomcolorNum === 3){
+            randomColor = "노랑";
+        } else if(randomcolorNum === 4){
+            randomColor = "초록";
+        } else if(randomcolorNum === 5){
+            randomColor = "파랑";
+        } else {
+            document.write("잘못된 값 입력");
+        };
+
+        if(randomColor===userColor){
+            document.write("축하합니다. 색깔을 맞추셨습니다!");
+        } else {
+            document.write(`아쉽네요. 컴퓨터가 생각한 색상은 ${randomColor}입니다.`)
+        }
+
+    </script>
+</body>
+</html>
