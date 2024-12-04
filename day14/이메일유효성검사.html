@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일유효성검사</title>
+</head>
+<body>
+    <script>
+        /* 
+        사용자에게 이메일을 입력받는다.
+        배열로 사용 가능한 도메인 형식을 지정해놓는다.
+        .co.kr / .com / .net
+
+        미리 만들어 놓을 변수
+        let check1 = false;
+        let check2 = false;
+
+        if문을 사용해서 사용자가 입력한 문자열 이메일에 @가 들어있는지 확인한다.
+        (들어있다면 check1을 true로 변경)
+
+        for문을 사용해서 도메인배열을 돌면서 사용자가 입력한 도메인이 도메인 배열에 들어있는지 확인
+        (들어있다면  check2를 true로 변경)
+
+        if문을 사용해서 check1과 check2가 둘 다 true라면
+        사용자가 입력한 이메일 + 은 사용 가능한 아이디 입니다. 출력
+        둘 중에 하나라도 false일 경우에는 이메일 형식이 잘못 되었습니다. 출력
+        */
+
+        let userMail = prompt("이메일을 입력하세요");
+        let domain = [".co.kr", ".com", ".net"];
+
+        let check1 = false;
+        let check2 = false;
+
+        if(userMail.indexOf("@")>0){
+            check1 = true;
+        };
+
+
+        for(let i = 0; i < domain.length; i++){
+            if(userMail.indexOf(domain[i]) > 0){
+                check2 = true;
+            }
+        };
+
+        if(check1 && check2){
+            document.write(userMail + " 은 사용 가능한 아이디입니다." + "<br>");
+        } else {
+            alert(" 이메일 형식이 잘못 되었습니다.");
+        };
+
+
+
+    </script>
+</body>
+</html>
