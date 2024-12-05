@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .section01 {
+            background-color: darkslateblue;
+            height: 100vh;
+        }
+
+        .new_background {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <section class="section01" id="section01"></section>
+    <script>
+            // 8. setTimeout(function(){자바스크립트코드;}일정시간간격) : 단 한 번 일정한 시간 간격으로 함수를 호출하여 코드를 실행한다.
+
+            // let setTimeoutcode = setTimeout(() => {
+            //     document.write("안녕하세요.");
+            // },3000);
+
+            let section = document.getElementById("section01");
+            let backgroundChange = setTimeout(()=>{
+                // section.style.background = "tomato";
+                section.classList.add("new_background");
+            },3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트업</title>
+</head>
+<body>
+    <script>
+        /* 
+        1. 사용자로부터 숫자 받아옴
+        2. 시작숫자에 대한 변수 생성
+        3. setInterval안에 현재 숫자를 출력한다. 그 다음 숫자 증가
+        4. if문을 통해 사용자에게 입력받은 값보다 시작숫자가 증가식을 통해 사용자에게 입력 받은 값보다 크다면 setInterval 종료 후 완료! 출력
+        5. 시간초는 0.1초 단위로 출력
+        */
+
+        let userNum = Number(prompt("숫자를 입력해주세요."));
+        let startNum = 0;
+        let autoNum = setInterval(() => {
+            document.write(startNum + "<br>");
+            startNum++;
+            if(startNum > userNum){
+            clearInterval(autoNum);
+            document.write("완료!");
+        };
+        },100);
+
+
+    </script>
+</body>
+</html>
